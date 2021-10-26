@@ -2,11 +2,10 @@ import React, { useState } from 'react';
 import { Modal } from 'react-responsive-modal';
 import 'react-responsive-modal/styles.css';
 
-const Edit = ({
+const MullionEdit = ({
   setHeight,
   setWidth,
   setTitle,
-  setPrice,
   smt,
   smr,
   smb,
@@ -18,60 +17,20 @@ const Edit = ({
   const onOpenModal = () => setOpen(true);
   const onCloseModal = () => setOpen(false);
 
-  const btnWidth = (width / 6) * 2;
-  const fontWidth = btnWidth / 5;
-
   return (
     <div>
       <button
         style={{
-          padding: '5px 7px',
-          fontSize: `${fontWidth}px`,
-          fontWeight: 400,
           cursor: 'pointer',
-          width: btnWidth,
-          borderRadius: '6px',
+          width: '5px',
+          height: '5px',
+          border: '1px solid grey',
+          padding: '7px',
+          borderRadius: '4px',
+          background: 'skyblue',
         }}
-        onClick={onOpenModal}>
-        Edit
-      </button>
+        onClick={onOpenModal}></button>
       <Modal open={open} onClose={onCloseModal} center>
-        <br />
-        <br />
-        <input
-          placeholder='Title'
-          type='text'
-          name='title'
-          id='title'
-          onChange={(e) => setTitle(e.target.value)}
-          style={{
-            width: '100%',
-            height: '40px',
-            fontSize: '18px',
-            textAlign: 'center',
-            border: '1px solid lightgray',
-            borderRadius: '2px',
-            display: 'inline-block',
-          }}
-        />
-        <br />
-        <input
-          placeholder='Price'
-          type='text'
-          name='price'
-          id='price'
-          onBlur={(e) => setPrice(e.target.value)}
-          style={{
-            width: '61%',
-            height: '40px',
-            fontSize: '18px',
-            textAlign: 'center',
-            border: '1px solid lightgray',
-            borderRadius: '2px',
-            display: 'inline-block',
-          }}
-        />
-        <br />
         <div
           style={{
             display: 'flex',
@@ -121,4 +80,4 @@ const Edit = ({
   );
 };
 
-export default Edit;
+export default MullionEdit;

@@ -2,8 +2,12 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+::placeholder {
+    color: black;
+}
+
 #parent {
-    height: 75vh;
+    height: 80vh;
     border: 2px solid lightgrey;
     padding: 10px;
     overflow: hidden;
