@@ -3,8 +3,6 @@ import { Rnd } from 'react-rnd';
 
 const Mullion = ({ key }) => {
   const [height, setHeight] = useState(60);
-  const [width, setWidth] = useState(12);
-  const [turn, setTurn] = useState(false);
 
   const style = {
     display: 'flex',
